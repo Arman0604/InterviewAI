@@ -34,7 +34,7 @@ Deployed app: [https://finops-jade.vercel.app](https://finops-jade.vercel.app)
 
 ## Architecture
 
-![AI Interview Platform architecture](C:\Users\singh\OneDrive\Desktop\ai-interview\publicInterviewAI_Architecture.png)
+![AI Interview Platform architecture](./public/ai-interview-architecture.svg)
 
 ## Run Locally
 
