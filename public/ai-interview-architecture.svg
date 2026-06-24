@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="950" viewBox="0 0 1500 950" role="img" aria-labelledby="title desc">
+  <title id="title">AI Interview Platform High-Level Architecture</title>
+  <desc id="desc">High-level architecture for InterviewAI showing candidate, Next.js app, API logic, data layer, external services, main flow, scoring, and proctoring.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .title { fill: #0b1635; font: 800 42px Arial, sans-serif; }
+      .subtitle { fill: #263c68; font: 18px Arial, sans-serif; }
+      .box { fill: #ffffff; stroke: #bed0ed; stroke-width: 1.6; }
+      .box-teal { fill: #f3ffff; stroke: #20a4a8; }
+      .box-purple { fill: #fbf9ff; stroke: #b6a4f4; }
+      .box-orange { fill: #fffaf5; stroke: #ff8a3d; }
+      .section { fill: #0b5fca; font: 800 18px Arial, sans-serif; }
+      .section-teal { fill: #077b7d; font: 800 18px Arial, sans-serif; }
+      .section-purple { fill: #5632b8; font: 800 18px Arial, sans-serif; }
+      .heading { fill: #0b2659; font: 700 17px Arial, sans-serif; }
+      .text { fill: #14284d; font: 14px Arial, sans-serif; }
+      .small { fill: #253858; font: 12px Arial, sans-serif; }
+      .tiny { fill: #253858; font: 11px Arial, sans-serif; }
+      .num { fill: #ffffff; font: 800 21px Arial, sans-serif; }
+      .arrow { stroke: #253858; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #253858; stroke-width: 2; fill: none; stroke-dasharray: 7 8; marker-end: url(#arrow); }
+      .icon-blue { fill: #0f64d7; }
+      .icon-teal { fill: #14a5a8; }
+      .icon-purple { fill: #7352d6; }
+      .icon-orange { fill: #ff6b00; }
+    </style>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#253858"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1500" height="950"/>
+  <text class="title" x="750" y="48" text-anchor="middle">AI Interview Platform - High-Level Architecture</text>
+  <text class="subtitle" x="750" y="82" text-anchor="middle">Next.js mock interview platform with real-time AI interviews, follow-up questions, aptitude tests, DSA rounds,</text>
+  <text class="subtitle" x="750" y="107" text-anchor="middle">resume personalization, proctoring, scoring, and final reports.</text>
+
+  <!-- Main columns -->
+  <rect class="box" x="22" y="125" width="185" height="560" rx="14"/>
+  <circle class="icon-blue" cx="60" cy="158" r="18"/><text class="num" x="60" y="165" text-anchor="middle">1</text>
+  <text class="section" x="88" y="164">Candidate</text>
+
+  <rect class="box" x="227" y="125" width="250" height="560" rx="14"/>
+  <circle class="icon-blue" cx="263" cy="158" r="18"/><text class="num" x="263" y="165" text-anchor="middle">2</text>
+  <text class="section" x="302" y="156">Next.js App</text>
+  <text class="section" x="302" y="181">(Frontend)</text>
+
+  <rect class="box" x="497" y="125" width="420" height="560" rx="14"/>
+  <circle class="icon-teal" cx="581" cy="158" r="18"/><text class="num" x="581" y="165" text-anchor="middle">3</text>
+  <text class="section-teal" x="615" y="164">API &amp; App Logic</text>
+
+  <rect class="box" x="942" y="125" width="245" height="560" rx="14"/>
+  <circle class="icon-teal" cx="1002" cy="158" r="18"/><text class="num" x="1002" y="165" text-anchor="middle">4</text>
+  <text class="section-teal" x="1032" y="164">Data Layer</text>
+
+  <rect class="box" x="1208" y="125" width="270" height="560" rx="14"/>
+  <circle class="icon-purple" cx="1244" cy="158" r="18"/><text class="num" x="1244" y="165" text-anchor="middle">5</text>
+  <text class="section-purple" x="1280" y="164">External Services</text>
+
+  <!-- Candidate -->
+  <circle fill="#e6f0ff" cx="96" cy="402" r="60"/>
+  <circle fill="#164a7c" cx="96" cy="378" r="22"/>
+  <path fill="#1776d2" d="M58 447c8-34 68-34 76 0z"/>
+  <text class="heading" x="96" y="487" text-anchor="middle">Candidate</text>
+  <path class="arrow" d="M164 408h52"/>
+
+  <!-- Frontend -->
+  <rect fill="#0b2659" x="282" y="195" width="136" height="80" rx="4"/>
+  <rect fill="#3a8be8" x="288" y="202" width="124" height="58" rx="2"/>
+  <rect fill="#ffffff" opacity=".86" x="325" y="210" width="78" height="42"/>
+  <rect fill="#cfe3ff" x="294" y="210" width="23" height="6"/><rect fill="#cfe3ff" x="294" y="222" width="23" height="6"/><rect fill="#cfe3ff" x="294" y="234" width="23" height="6"/>
+  <rect fill="#0b2659" x="338" y="275" width="24" height="11"/><rect fill="#0b2659" x="318" y="286" width="66" height="6" rx="3"/>
+
+  <g>
+    <rect class="box" x="238" y="295" width="220" height="65" rx="8"/>
+    <rect class="icon-blue" x="258" y="315" width="28" height="32" rx="5"/>
+    <path d="M264 315v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#fff" stroke-width="4"/>
+    <text class="heading" x="306" y="318">Auth &amp; Landing</text>
+    <text class="small" x="306" y="339">login, register, session redirect</text>
+  </g>
+  <g>
+    <rect class="box" x="238" y="368" width="220" height="65" rx="8"/>
+    <rect class="icon-blue" x="254" y="381" width="32" height="32" rx="3"/>
+    <rect fill="#fff" x="261" y="388" width="7" height="7"/><rect fill="#fff" x="273" y="388" width="7" height="7"/><rect fill="#fff" x="261" y="400" width="7" height="7"/><rect fill="#fff" x="273" y="400" width="7" height="7"/>
+    <text class="heading" x="306" y="391">Dashboard</text>
+    <text class="small" x="306" y="412">role/round selection, reports</text>
+  </g>
+  <g>
+    <rect class="box" x="238" y="441" width="220" height="65" rx="8"/>
+    <circle class="icon-blue" cx="270" cy="474" r="17"/>
+    <path d="M262 471h18M262 478h11" stroke="#fff" stroke-width="3"/>
+    <text class="heading" x="306" y="464">Interview Workspace</text>
+    <text class="small" x="306" y="485">live conversation + follow-ups</text>
+  </g>
+  <g>
+    <rect class="box" x="238" y="514" width="220" height="65" rx="8"/>
+    <rect class="icon-blue" x="254" y="530" width="33" height="33" rx="4"/>
+    <text fill="#fff" font="700 18px monospace" x="270" y="552" text-anchor="middle">&lt;/&gt;</text>
+    <text class="heading" x="306" y="537">DSA IDE</text>
+    <text class="small" x="306" y="558">editor, run, submit</text>
+  </g>
+  <g>
+    <rect class="box" x="238" y="587" width="220" height="65" rx="8"/>
+    <circle class="icon-blue" cx="271" cy="618" r="17"/>
+    <circle fill="#fff" cx="271" cy="618" r="6"/>
+    <text class="heading" x="306" y="610">Resume + Proctoring</text>
+    <text class="small" x="306" y="631">PDF upload, webcam, tab checks</text>
+  </g>
+  <rect fill="#edf7ff" stroke="#9fc5ff" x="238" y="660" width="220" height="24" rx="7"/>
+  <text class="small" x="348" y="677" text-anchor="middle">App Router pages + client components</text>
+
+  <path class="arrow" d="M477 405h43"/>
+
+  <!-- API logic -->
+  <g>
+    <rect fill="#0d5967" x="552" y="190" width="88" height="22" rx="4"/>
+    <rect fill="#0d7f89" x="552" y="215" width="88" height="22" rx="4"/>
+    <rect fill="#0d5967" x="552" y="240" width="88" height="22" rx="4"/>
+    <circle fill="#ffd45f" cx="626" cy="201" r="3"/><circle fill="#ffd45f" cx="626" cy="226" r="3"/><circle fill="#ffd45f" cx="626" cy="251" r="3"/>
+  </g>
+  <rect class="box-teal" x="520" y="285" width="162" height="74" rx="8"/>
+  <text class="heading" x="602" y="311" text-anchor="middle">Route Handlers</text>
+  <text class="small" x="602" y="331" text-anchor="middle">auth, attempts, messages,</text>
+  <text class="small" x="602" y="348" text-anchor="middle">reports, uploads</text>
+
+  <rect class="box-purple" x="740" y="190" width="153" height="154" rx="10"/>
+  <text class="icon-purple" x="770" y="245" font="700 42px Arial, sans-serif">AI</text>
+  <text class="heading" x="817" y="219" text-anchor="middle">Real-Time</text>
+  <text class="heading" x="817" y="240" text-anchor="middle">AI Interviewer</text>
+  <text class="small" x="817" y="268" text-anchor="middle">live interviewer</text>
+  <text class="small" x="817" y="286" text-anchor="middle">interaction during</text>
+  <text class="small" x="817" y="304" text-anchor="middle">the interview</text>
+
+  <rect class="box-teal" x="520" y="380" width="352" height="68" rx="10"/>
+  <text class="heading" x="695" y="412" text-anchor="middle">Next.js Proxy + API</text>
+  <text class="text" x="695" y="435" text-anchor="middle">proxy.ts + /api/**</text>
+
+  <rect class="box-teal" x="520" y="475" width="352" height="110" rx="10"/>
+  <text class="heading" x="696" y="512" text-anchor="middle">Real-Time AI Interview Engine</text>
+  <text class="small" x="696" y="537" text-anchor="middle">handles conversation, next-question selection,</text>
+  <text class="small" x="696" y="556" text-anchor="middle">follow-up questions, and report feedback using</text>
+  <text class="small" x="696" y="575" text-anchor="middle">candidate answers and resume context</text>
+
+  <rect class="box-teal" x="520" y="602" width="352" height="48" rx="8"/>
+  <text class="heading" x="696" y="632" text-anchor="middle">DSA Scorer - correctness, edge cases, complexity</text>
+  <rect fill="#e9fbfb" stroke="#a7dcdf" x="520" y="660" width="352" height="25" rx="8"/>
+  <text class="small" x="696" y="677" text-anchor="middle">Owns attempt lifecycle and all database writes</text>
+
+  <path class="arrow" d="M695 359v20"/>
+  <path class="arrow" d="M695 448v26"/>
+  <path class="arrow" d="M695 585v16"/>
+  <path class="arrow" d="M682 322v52"/>
+  <path class="arrow" d="M818 344v30"/>
+  <path class="arrow" d="M872 405h65"/>
+
+  <!-- Data -->
+  <g>
+    <ellipse fill="#1ec5c8" stroke="#085d67" stroke-width="2" cx="1060" cy="218" rx="36" ry="13"/>
+    <rect fill="#1ec5c8" stroke="#085d67" stroke-width="2" x="1024" y="218" width="72" height="52"/>
+    <ellipse fill="#1ec5c8" stroke="#085d67" stroke-width="2" cx="1060" cy="270" rx="36" ry="13"/>
+    <path d="M1024 236c20 13 52 13 72 0M1024 254c20 13 52 13 72 0" stroke="#085d67" stroke-width="2" fill="none"/>
+  </g>
+  <rect class="box-teal" x="965" y="326" width="195" height="235" rx="10"/>
+  <text class="heading" x="1063" y="368" text-anchor="middle">PostgreSQL</text>
+  <text class="small" x="1005" y="415">users</text>
+  <text class="small" x="1005" y="452">interview_sessions</text>
+  <text class="small" x="1005" y="489">interview_attempts</text>
+  <text class="small" x="1005" y="526">proctoring_events</text>
+  <circle fill="#0b2659" cx="987" cy="411" r="3"/><circle fill="#0b2659" cx="987" cy="448" r="3"/><circle fill="#0b2659" cx="987" cy="485" r="3"/><circle fill="#0b2659" cx="987" cy="522" r="3"/>
+  <text class="small" x="1063" y="599" text-anchor="middle">Stores conversation, questions, scores,</text>
+  <text class="small" x="1063" y="618" text-anchor="middle">code submissions, proctoring events,</text>
+  <text class="small" x="1063" y="637" text-anchor="middle">and report data</text>
+
+  <!-- External -->
+  <rect class="box-purple" x="1228" y="215" width="232" height="128" rx="9"/>
+  <text class="icon-purple" x="1263" y="284" font="700 56px Arial, sans-serif">*</text>
+  <text class="heading" x="1346" y="254" text-anchor="middle">Gemini AI</text>
+  <text class="small" x="1346" y="277" text-anchor="middle">interviewer prompts,</text>
+  <text class="small" x="1346" y="295" text-anchor="middle">dynamic follow-ups,</text>
+  <text class="small" x="1346" y="313" text-anchor="middle">and richer feedback</text>
+
+  <rect class="box-purple" x="1228" y="380" width="232" height="112" rx="9"/>
+  <rect class="icon-purple" x="1254" y="405" width="45" height="58" rx="4"/>
+  <text fill="#fff" font="700 18px Arial, sans-serif" x="1277" y="440" text-anchor="middle">PDF</text>
+  <text class="heading" x="1346" y="424" text-anchor="middle">PDF Parser</text>
+  <text class="small" x="1346" y="448" text-anchor="middle">resume text extraction</text>
+
+  <rect class="box-purple" x="1228" y="528" width="232" height="120" rx="9"/>
+  <rect class="icon-purple" x="1254" y="561" width="48" height="48" rx="6"/>
+  <text fill="#fff" font="700 19px monospace" x="1278" y="591" text-anchor="middle">&lt;/&gt;</text>
+  <text class="heading" x="1346" y="566" text-anchor="middle">Judge0 /</text>
+  <text class="heading" x="1346" y="588" text-anchor="middle">Local Runner</text>
+  <text class="small" x="1346" y="614" text-anchor="middle">code execution</text>
+
+  <path class="dash" d="M1160 361c42 0 43-94 67-94"/>
+  <path class="dash" d="M1160 446h65"/>
+  <path class="dash" d="M1160 520c45 0 41 61 66 61"/>
+
+  <!-- Route summary -->
+  <rect class="box" x="22" y="696" width="918" height="55" rx="10"/>
+  <circle fill="#eef6ff" stroke="#0b2659" stroke-width="2" cx="53" cy="724" r="17"/>
+  <path d="M36 724h34M53 707c9 10 9 24 0 34M53 707c-9 10-9 24 0 34" stroke="#0b2659" stroke-width="2" fill="none"/>
+  <text class="heading" x="84" y="722">Route Summary (Next.js App Router)</text>
+  <text class="text" x="84" y="743">/login    |    /register    |    /candidate/dashboard    |    /interview/[attemptId]    |    /dsa/[attemptId]    |    /report/[attemptId]</text>
+
+  <!-- Main flow -->
+  <rect fill="#ffffff" stroke="#2675ff" stroke-width="1.8" x="22" y="765" width="918" height="160" rx="12"/>
+  <text class="section" x="481" y="793" text-anchor="middle">Main Flow</text>
+  <g>
+    <rect class="box" x="42" y="810" width="110" height="116" rx="10"/><circle class="icon-blue" cx="55" cy="823" r="14"/><text class="num" x="55" y="830" text-anchor="middle" font-size="15">1</text>
+    <circle fill="none" stroke="#0f64d7" stroke-width="4" cx="95" cy="849" r="12"/><path fill="#0f64d7" d="M68 890c5-27 49-27 54 0z"/>
+    <text class="small" x="97" y="901" text-anchor="middle">Candidate</text><text class="small" x="97" y="917" text-anchor="middle">logs in</text>
+  </g>
+  <g>
+    <rect class="box" x="190" y="810" width="110" height="116" rx="10"/><circle class="icon-blue" cx="203" cy="823" r="14"/><text class="num" x="203" y="830" text-anchor="middle" font-size="15">2</text>
+    <path d="M228 835h8M246 835h30M228 855h8M246 855h30M228 875h8M246 875h30" stroke="#0f64d7" stroke-width="5" stroke-linecap="round"/>
+    <text class="small" x="245" y="901" text-anchor="middle">Chooses role</text><text class="small" x="245" y="917" text-anchor="middle">and round</text>
+  </g>
+  <g>
+    <rect class="box" x="338" y="810" width="125" height="116" rx="10"/><circle class="icon-blue" cx="351" cy="823" r="14"/><text class="num" x="351" y="830" text-anchor="middle" font-size="15">3</text>
+    <path d="M388 835h28l16 16v40h-44zM416 835v16h16M411 883v-32M399 863l12-12 12 12" stroke="#0f64d7" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="small" x="400" y="901" text-anchor="middle">Uploads resume /</text><text class="small" x="400" y="917" text-anchor="middle">starts attempt</text>
+  </g>
+  <g>
+    <rect class="box" x="493" y="810" width="150" height="116" rx="10"/><circle class="icon-blue" cx="506" cy="823" r="14"/><text class="num" x="506" y="830" text-anchor="middle" font-size="15">4</text>
+    <circle fill="#0f64d7" cx="558" cy="858" r="23"/><rect fill="#fff" x="546" y="849" width="24" height="18" rx="3"/>
+    <text class="small" x="568" y="901" text-anchor="middle">AI interviewer asks</text><text class="small" x="568" y="917" text-anchor="middle">questions in real time</text>
+  </g>
+  <g>
+    <rect class="box" x="672" y="810" width="120" height="116" rx="10"/><circle class="icon-blue" cx="685" cy="823" r="14"/><text class="num" x="685" y="830" text-anchor="middle" font-size="15">5</text>
+    <text class="icon-blue" x="731" y="874" font="700 42px Arial, sans-serif">AI</text>
+    <text class="small" x="733" y="901" text-anchor="middle">AI / scorer</text><text class="small" x="733" y="917" text-anchor="middle">evaluates attempt</text>
+  </g>
+  <g>
+    <rect class="box" x="826" y="810" width="110" height="116" rx="10"/><circle class="icon-blue" cx="839" cy="823" r="14"/><text class="num" x="839" y="830" text-anchor="middle" font-size="15">6</text>
+    <path d="M868 835h26l14 14v42h-40zM894 835v14h14M877 866h22M877 879h22" stroke="#0f64d7" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="small" x="882" y="901" text-anchor="middle">Report stored</text><text class="small" x="882" y="917" text-anchor="middle">and shown</text>
+  </g>
+  <path class="arrow" d="M154 866h32M302 866h32M465 866h24M645 866h24M794 866h28"/>
+
+  <!-- Scoring -->
+  <rect class="box-orange" x="972" y="765" width="506" height="160" rx="12"/>
+  <text fill="#ff6b00" font="800 20px Arial, sans-serif" x="1225" y="793" text-anchor="middle">Scoring &amp; Proctoring</text>
+  <g>
+    <rect fill="none" stroke="#ff6b00" stroke-width="4" x="1002" y="822" width="62" height="54" rx="5"/>
+    <path d="M1015 842l7 7 14-16M1015 862l7 7 14-16" stroke="#ff6b00" stroke-width="4" fill="none"/>
+    <text class="small" x="1033" y="902" text-anchor="middle">Interview /</text><text class="small" x="1033" y="918" text-anchor="middle">Aptitude / DSA</text>
+  </g>
+  <g>
+    <circle fill="#ff6b00" cx="1158" cy="849" r="27"/><circle fill="#fffaf5" cx="1158" cy="849" r="10"/>
+    <text class="small" x="1158" y="902" text-anchor="middle">Evaluate answers /</text><text class="small" x="1158" y="918" text-anchor="middle">run tests</text>
+  </g>
+  <g>
+    <circle fill="none" stroke="#ff6b00" stroke-width="9" cx="1285" cy="849" r="24"/><circle fill="#ff6b00" cx="1285" cy="849" r="8"/>
+    <text class="small" x="1285" y="902" text-anchor="middle">Record webcam +</text><text class="small" x="1285" y="918" text-anchor="middle">tab events</text>
+  </g>
+  <g>
+    <rect fill="none" stroke="#ff6b00" stroke-width="4" x="1385" y="820" width="50" height="62" rx="5"/>
+    <path d="M1400 842h18M1400 858h18M1408 870l5-10 5 10 10 1-8 7 2 10-9-5-9 5 2-10-8-7z" fill="#ff6b00"/>
+    <text class="small" x="1410" y="902" text-anchor="middle">Final score +</text><text class="small" x="1410" y="918" text-anchor="middle">feedback report</text>
+  </g>
+  <path stroke="#ff6b00" stroke-width="3" marker-end="url(#arrow)" d="M1075 849h48"/>
+  <path stroke="#ff6b00" stroke-width="3" marker-end="url(#arrow)" d="M1193 849h56"/>
+  <path stroke="#ff6b00" stroke-width="3" marker-end="url(#arrow)" d="M1322 849h46"/>
+</svg>
