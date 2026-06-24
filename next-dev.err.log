@@ -1,0 +1,79 @@
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="login/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/login" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="login/page...">
+                <SegmentTrieNode>
+                <LoginPage>
+                  <LoginForm>
+                    <main className="mock-login...">
+                      <section className="mock-login..." aria-label="InterviewA...">
+                        <div>
+                        <div className="mock-login...">
+                          <aside>
+                          <section className="mock-login...">
+                            <div>
+                            <div className="mock-form-...">
+                              <div>
+                              <form onSubmit={function handleSubmit} className="mock-login...">
+                                <label>
+                                  <span>
+                                  <div className="mock-input...">
+                                    <Mail>
+                                    <input
+                                      id="email"
+                                      type="email"
+                                      placeholder="Enter your email"
+                                      value=""
+                                      onChange={function onChange}
+                                      required={true}
+                                      autoComplete="email"
+-                                     fdprocessedid="jmgyir"
+                                    >
+                                <label>
+                                  <span>
+                                  <div className="mock-input...">
+                                    <Lock>
+                                    <input
+                                      id="password"
+                                      type="password"
+                                      placeholder="Enter your password"
+                                      value=""
+                                      onChange={function onChange}
+                                      required={true}
+                                      autoComplete="current-password"
+-                                     fdprocessedid="2kztas"
+                                    >
+                                    <button
+                                      type="button"
+                                      className="mock-password-toggle"
+                                      onClick={function onClick}
+                                      aria-label="Show password"
+-                                     fdprocessedid="c6i0fb"
+                                    >
+                                <button
+                                  id="login-btn"
+                                  type="submit"
+                                  className="mock-signin-btn"
+                                  disabled={false}
+-                                 fdprocessedid="3yyko"
+                                >
++                                 Sign In
+                              ...
+              ...
+            ...
+ 

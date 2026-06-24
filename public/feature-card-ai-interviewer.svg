@@ -1,0 +1,41 @@
+<svg width="320" height="250" viewBox="30 18 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="aiHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 116) rotate(90) scale(88)">
+      <stop stop-color="#F7F4FF"/>
+      <stop offset="1" stop-color="#F7F4FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="aiBase" x1="98" y1="156" x2="210" y2="186" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3EEFF"/>
+    </linearGradient>
+    <linearGradient id="aiBody" x1="111" y1="76" x2="206" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8DEFF"/>
+    </linearGradient>
+    <filter id="aiShadow" x="73" y="55" width="174" height="156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#8B6CF5" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g fill="#D8D2FF" opacity="0.7">
+    <circle cx="56" cy="60" r="2"/><circle cx="70" cy="60" r="2"/><circle cx="84" cy="60" r="2"/><circle cx="98" cy="60" r="2"/>
+    <circle cx="56" cy="74" r="2"/><circle cx="70" cy="74" r="2"/><circle cx="84" cy="74" r="2"/><circle cx="98" cy="74" r="2"/>
+    <circle cx="56" cy="88" r="2"/><circle cx="70" cy="88" r="2"/><circle cx="84" cy="88" r="2"/><circle cx="98" cy="88" r="2"/>
+    <circle cx="56" cy="102" r="2"/><circle cx="70" cy="102" r="2"/><circle cx="84" cy="102" r="2"/><circle cx="98" cy="102" r="2"/>
+  </g>
+  <path d="M244 69L247.3 75.7L254 79L247.3 82.3L244 89L240.7 82.3L234 79L240.7 75.7L244 69Z" fill="#E0D7FF"/>
+  <path d="M267 91L269.2 95.8L274 98L269.2 100.2L267 105L264.8 100.2L260 98L264.8 95.8L267 91Z" fill="#D8D0FF"/>
+  <circle cx="160" cy="116" r="88" fill="url(#aiHalo)"/>
+  <g filter="url(#aiShadow)">
+    <rect x="93" y="156" width="120" height="28" rx="14" fill="url(#aiBase)" stroke="#D7CCFF" stroke-width="2"/>
+    <rect x="102" y="146" width="102" height="24" rx="12" fill="#FCFAFF" stroke="#DDD4FF" stroke-width="2"/>
+    <rect x="111" y="76" width="86" height="78" rx="24" fill="url(#aiBody)" stroke="#D9D0FF" stroke-width="2"/>
+    <rect x="125" y="94" width="58" height="38" rx="14" fill="#34298D"/>
+    <rect x="137" y="105" width="10" height="18" rx="5" fill="#FFFFFF"/>
+    <rect x="161" y="105" width="10" height="18" rx="5" fill="#FFFFFF"/>
+    <rect x="154" y="58" width="12" height="18" rx="6" fill="#A786FF"/>
+    <path d="M160 54V38" stroke="#A786FF" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="160" cy="34" r="8" fill="#C5B0FF"/>
+    <rect x="101" y="103" width="8" height="28" rx="4" fill="#EEE8FF"/>
+    <rect x="199" y="98" width="18" height="30" rx="9" fill="#D8D0FF" stroke="#C5B9FF" stroke-width="2"/>
+  </g>
+</svg>

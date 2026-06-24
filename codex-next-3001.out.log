@@ -1,0 +1,10 @@
+
+> ai-interview@0.1.0 dev
+> next dev --webpack -p 3001
+
+▲ Next.js 16.2.6 (webpack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.29.102:3001
+- Environments: .env.local
+✓ Ready in 1740ms
+[?25h

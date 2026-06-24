@@ -1,0 +1,30 @@
+<svg width="320" height="250" viewBox="30 18 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="voiceHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 116) rotate(90) scale(88)">
+      <stop stop-color="#F7F4FF"/>
+      <stop offset="1" stop-color="#F7F4FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="voiceBase" x1="100" y1="156" x2="221" y2="185" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3EDFF"/>
+    </linearGradient>
+    <filter id="voiceShadow" x="72" y="53" width="178" height="164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#9268FF" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g fill="#D5CBFF" opacity="0.8">
+    <circle cx="58" cy="126" r="2"/><circle cx="68" cy="122" r="2"/><circle cx="78" cy="118" r="2"/><circle cx="88" cy="122" r="2"/><circle cx="98" cy="126" r="2"/>
+    <circle cx="222" cy="126" r="2"/><circle cx="232" cy="122" r="2"/><circle cx="242" cy="118" r="2"/><circle cx="252" cy="122" r="2"/><circle cx="262" cy="126" r="2"/>
+  </g>
+  <circle cx="160" cy="116" r="88" fill="url(#voiceHalo)"/>
+  <g filter="url(#voiceShadow)">
+    <rect x="100" y="156" width="120" height="28" rx="14" fill="url(#voiceBase)" stroke="#D7CCFF" stroke-width="2"/>
+    <ellipse cx="160" cy="150" rx="28" ry="10" fill="#EDE5FF" stroke="#CBB9FF" stroke-width="2"/>
+    <rect x="147" y="70" width="26" height="68" rx="13" fill="#B08AFF" stroke="#8F68FF" stroke-width="3"/>
+    <path d="M132 117C132 133 143 145 160 145C177 145 188 133 188 117" stroke="#8F68FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M160 145V162" stroke="#8F68FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M142 166H178" stroke="#8F68FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M90 126H102V110H106V138H110V118H114V132H118" stroke="#B9A6FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M202 126H214V110H218V138H222V118H226V132H230" stroke="#B9A6FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

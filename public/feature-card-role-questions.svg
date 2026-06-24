@@ -1,0 +1,36 @@
+<svg width="320" height="250" viewBox="30 18 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="codeHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 114) rotate(90) scale(90)">
+      <stop stop-color="#F3F6FF"/>
+      <stop offset="1" stop-color="#F3F6FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="codePanel" x1="110" y1="78" x2="210" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF3FF"/>
+    </linearGradient>
+    <linearGradient id="codeBase" x1="95" y1="154" x2="214" y2="186" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDF3FF"/>
+    </linearGradient>
+    <filter id="codeShadow" x="79" y="59" width="166" height="154" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#4E8FFF" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g fill="#CADCFF" opacity="0.8">
+    <circle cx="62" cy="60" r="2"/><circle cx="76" cy="60" r="2"/><circle cx="90" cy="60" r="2"/><circle cx="104" cy="60" r="2"/>
+    <circle cx="62" cy="74" r="2"/><circle cx="76" cy="74" r="2"/><circle cx="90" cy="74" r="2"/><circle cx="104" cy="74" r="2"/>
+    <circle cx="62" cy="88" r="2"/><circle cx="76" cy="88" r="2"/><circle cx="90" cy="88" r="2"/><circle cx="104" cy="88" r="2"/>
+    <circle cx="250" cy="110" r="2"/><circle cx="264" cy="110" r="2"/><circle cx="278" cy="110" r="2"/>
+    <circle cx="250" cy="124" r="2"/><circle cx="264" cy="124" r="2"/><circle cx="278" cy="124" r="2"/>
+    <circle cx="250" cy="138" r="2"/><circle cx="264" cy="138" r="2"/><circle cx="278" cy="138" r="2"/>
+  </g>
+  <circle cx="160" cy="114" r="90" fill="url(#codeHalo)"/>
+  <g filter="url(#codeShadow)">
+    <rect x="94" y="156" width="124" height="28" rx="14" fill="url(#codeBase)" stroke="#C9D8FF" stroke-width="2"/>
+    <rect x="104" y="146" width="104" height="24" rx="12" fill="#FCFDFF" stroke="#D3E0FF" stroke-width="2"/>
+    <rect x="113" y="76" width="96" height="82" rx="18" transform="rotate(4 113 76)" fill="url(#codePanel)" stroke="#C2D3FF" stroke-width="2"/>
+    <path d="M141 104L125 118L141 132" stroke="#2264F0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M179 104L195 118L179 132" stroke="#2264F0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M166 100L154 136" stroke="#2264F0" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>

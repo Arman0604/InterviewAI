@@ -1,0 +1,13 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
+
+export const geminiModel = genAI.getGenerativeModel({
+  model: "gemini-flash-latest",
+  generationConfig: {
+    temperature: 0.8,
+    maxOutputTokens: 1024,
+  },
+});
+
+export default genAI;

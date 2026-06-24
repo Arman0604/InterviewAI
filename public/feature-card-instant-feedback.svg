@@ -1,0 +1,38 @@
+<svg width="320" height="250" viewBox="30 18 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="feedbackHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 112) rotate(90) scale(90)">
+      <stop stop-color="#EEFFFA"/>
+      <stop offset="1" stop-color="#EEFFFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="feedbackGlass" x1="110" y1="80" x2="222" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#ECFFF8"/>
+    </linearGradient>
+    <linearGradient id="feedbackBase" x1="94" y1="156" x2="216" y2="186" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8FFF5"/>
+    </linearGradient>
+    <filter id="feedbackShadow" x="77" y="60" width="170" height="156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#2AC98C" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g fill="#BDF5DF" opacity="0.8">
+    <circle cx="60" cy="58" r="2"/><circle cx="74" cy="58" r="2"/><circle cx="88" cy="58" r="2"/>
+    <circle cx="60" cy="72" r="2"/><circle cx="74" cy="72" r="2"/><circle cx="88" cy="72" r="2"/>
+    <circle cx="60" cy="86" r="2"/><circle cx="74" cy="86" r="2"/><circle cx="88" cy="86" r="2"/>
+    <circle cx="252" cy="94" r="2"/><circle cx="266" cy="94" r="2"/><circle cx="280" cy="94" r="2"/>
+    <circle cx="252" cy="108" r="2"/><circle cx="266" cy="108" r="2"/><circle cx="280" cy="108" r="2"/>
+    <circle cx="252" cy="122" r="2"/><circle cx="266" cy="122" r="2"/><circle cx="280" cy="122" r="2"/>
+  </g>
+  <circle cx="160" cy="112" r="90" fill="url(#feedbackHalo)"/>
+  <path d="M103 112L117 93L129 101L143 82L155 92L173 81" stroke="#D6F8EC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#feedbackShadow)">
+    <rect x="94" y="156" width="124" height="28" rx="14" fill="url(#feedbackBase)" stroke="#BDEFD9" stroke-width="2"/>
+    <rect x="104" y="146" width="104" height="24" rx="12" fill="#FCFFFD" stroke="#C9F6E4" stroke-width="2"/>
+    <rect x="114" y="78" width="94" height="82" rx="16" fill="url(#feedbackGlass)" stroke="#BAEED7" stroke-width="2"/>
+    <rect x="138" y="118" width="18" height="38" rx="4" fill="#34D399"/>
+    <rect x="162" y="98" width="18" height="58" rx="4" fill="#4ADE80"/>
+    <rect x="186" y="74" width="18" height="82" rx="4" fill="#10B981"/>
+    <path d="M137 103L149 87L162 92L176 79L194 78" stroke="#D7FBEE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

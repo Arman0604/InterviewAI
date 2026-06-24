@@ -1,0 +1,48 @@
+<svg width="320" height="250" viewBox="30 18 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="historyHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 112) rotate(90) scale(92)">
+      <stop stop-color="#FFF7F0"/>
+      <stop offset="1" stop-color="#FFF7F0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="historyPanel" x1="110" y1="66" x2="225" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDFC"/>
+      <stop offset="1" stop-color="#FFF2E7"/>
+    </linearGradient>
+    <linearGradient id="historyClock" x1="212" y1="148" x2="258" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F3"/>
+      <stop offset="1" stop-color="#FFD7BD"/>
+    </linearGradient>
+    <filter id="historyShadow" x="80" y="50" width="182" height="168" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#FFAE76" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g fill="#FFD9C2" opacity="0.8">
+    <circle cx="58" cy="82" r="2"/><circle cx="72" cy="82" r="2"/><circle cx="86" cy="82" r="2"/>
+    <circle cx="58" cy="96" r="2"/><circle cx="72" cy="96" r="2"/><circle cx="86" cy="96" r="2"/>
+    <circle cx="58" cy="110" r="2"/><circle cx="72" cy="110" r="2"/><circle cx="86" cy="110" r="2"/>
+    <circle cx="240" cy="138" r="2"/><circle cx="254" cy="138" r="2"/><circle cx="268" cy="138" r="2"/>
+    <circle cx="240" cy="152" r="2"/><circle cx="254" cy="152" r="2"/><circle cx="268" cy="152" r="2"/>
+    <circle cx="240" cy="166" r="2"/><circle cx="254" cy="166" r="2"/><circle cx="268" cy="166" r="2"/>
+  </g>
+  <circle cx="160" cy="112" r="92" fill="url(#historyHalo)"/>
+  <g filter="url(#historyShadow)">
+    <rect x="110" y="60" width="108" height="142" rx="14" fill="url(#historyPanel)" stroke="#F7CBAF" stroke-width="2"/>
+    <rect x="110" y="60" width="108" height="28" rx="14" fill="#FFF0E4" stroke="#F7CBAF" stroke-width="2"/>
+    <text x="126" y="78" fill="#354261" font-family="Inter, sans-serif" font-size="8" font-weight="700">Past Interviews</text>
+    <rect x="120" y="96" width="88" height="34" rx="8" fill="#FFFFFF" stroke="#F2DDCF" stroke-width="2"/>
+    <rect x="120" y="138" width="88" height="34" rx="8" fill="#FFFFFF" stroke="#F2DDCF" stroke-width="2"/>
+    <rect x="120" y="180" width="88" height="18" rx="8" fill="#FFFFFF" stroke="#F2DDCF" stroke-width="2"/>
+    <text x="129" y="110" fill="#3E4B67" font-family="Inter, sans-serif" font-size="7" font-weight="700">Interview #12</text>
+    <text x="129" y="124" fill="#22A06B" font-family="Inter, sans-serif" font-size="14" font-weight="800">85%</text>
+    <text x="129" y="152" fill="#3E4B67" font-family="Inter, sans-serif" font-size="7" font-weight="700">Interview #11</text>
+    <text x="129" y="166" fill="#FF8D3A" font-family="Inter, sans-serif" font-size="14" font-weight="800">78%</text>
+    <text x="129" y="194" fill="#3E4B67" font-family="Inter, sans-serif" font-size="7" font-weight="700">Interview #10</text>
+    <text x="129" y="194" fill="#27B46F" font-family="Inter, sans-serif" font-size="14" font-weight="800" transform="translate(0 14)">92%</text>
+    <rect x="185" y="104" width="5" height="16" rx="1.5" fill="#7DDEAA"/><rect x="192" y="100" width="5" height="20" rx="1.5" fill="#59D59B"/><rect x="199" y="94" width="5" height="26" rx="1.5" fill="#31C786"/>
+    <rect x="185" y="146" width="5" height="16" rx="1.5" fill="#FFBF8E"/><rect x="192" y="140" width="5" height="22" rx="1.5" fill="#FFA661"/><rect x="199" y="134" width="5" height="28" rx="1.5" fill="#FF8D3A"/>
+    <rect x="185" y="188" width="5" height="8" rx="1.5" fill="#7DDEAA"/><rect x="192" y="182" width="5" height="14" rx="1.5" fill="#59D59B"/><rect x="199" y="176" width="5" height="20" rx="1.5" fill="#31C786"/>
+    <circle cx="226" cy="176" r="22" fill="url(#historyClock)" stroke="#FFB487" stroke-width="2"/>
+    <circle cx="226" cy="176" r="16" fill="#FFF9F5" stroke="#FFD1B0" stroke-width="2"/>
+    <path d="M226 168V176H234" stroke="#FF9B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg width="320" height="250" viewBox="30 18 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="targetHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 114) rotate(90) scale(90)">
+      <stop stop-color="#F7F2FF"/>
+      <stop offset="1" stop-color="#F7F2FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="targetBase" x1="101" y1="154" x2="219" y2="184" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F1E8FF"/>
+    </linearGradient>
+    <filter id="targetShadow" x="82" y="54" width="176" height="164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#9D72FF" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g fill="#D8CCFF" opacity="0.8">
+    <circle cx="62" cy="58" r="2"/><circle cx="76" cy="58" r="2"/><circle cx="90" cy="58" r="2"/><circle cx="104" cy="58" r="2"/>
+    <circle cx="62" cy="72" r="2"/><circle cx="76" cy="72" r="2"/><circle cx="90" cy="72" r="2"/><circle cx="104" cy="72" r="2"/>
+    <circle cx="250" cy="120" r="2"/><circle cx="264" cy="120" r="2"/><circle cx="278" cy="120" r="2"/>
+    <circle cx="250" cy="134" r="2"/><circle cx="264" cy="134" r="2"/><circle cx="278" cy="134" r="2"/>
+  </g>
+  <circle cx="160" cy="114" r="90" fill="url(#targetHalo)"/>
+  <g filter="url(#targetShadow)">
+    <rect x="100" y="156" width="120" height="28" rx="14" fill="url(#targetBase)" stroke="#D6C9FF" stroke-width="2"/>
+    <circle cx="158" cy="111" r="50" fill="#FBF8FF" stroke="#B88BFF" stroke-width="5"/>
+    <circle cx="158" cy="111" r="34" fill="#F4EDFF" stroke="#9D72FF" stroke-width="5"/>
+    <circle cx="158" cy="111" r="18" fill="#EFE5FF" stroke="#8E61FF" stroke-width="5"/>
+    <circle cx="158" cy="111" r="7" fill="#7A50FF"/>
+    <path d="M158 111L212 75" stroke="#7A50FF" stroke-width="7" stroke-linecap="round"/>
+    <path d="M210 67L225 77L211 89V80L198 80L210 67Z" fill="#7A50FF"/>
+  </g>
+</svg>
