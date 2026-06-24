@@ -2,7 +2,7 @@
 
 InterviewAI is an AI-powered mock interview platform that helps candidates practice before real interviews. A candidate can sign up, choose a role and interview round, upload a resume when needed, answer AI interview questions, solve DSA problems, and get a final score with feedback.
 
-Deployed app: [https://finops-jade.vercel.app](https://finops-jade.vercel.app)
+Deployed app: [https://ai-interview-one-lemon.vercel.app](https://ai-interview-one-lemon.vercel.app)
 
 ## Top Features
 
